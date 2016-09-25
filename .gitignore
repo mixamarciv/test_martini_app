@@ -1,0 +1,11 @@
+
+
+*.exe
+
+*.fdb
+
+pkg/
+src/github.com/
+src/golang.org/
+log/
+
