@@ -16,7 +16,10 @@ CD "%this_file_path%\.."
 :: задаем основные пути для запуска скрипта
 
 :: пути к компилятору go
-@SET GOROOT=d:\program\go\1.7\
+@SET GOROOT1=d:\program\go\1.7\
+@SET GOROOT2=d:\program\go\1.6.2\Go\
+
+@SET GOROOT=%GOROOT2%
 
 :: пути к исходным кодам программы на go
 @SET GOPATH=%this_file_path%\..
@@ -25,8 +28,11 @@ CD "%this_file_path%\.."
 @SET PYTHON_PATH=d:\program\Python26
 @SET MINGW_PATH=c:\MINGW
 
-@SET PATH=
-@SET PATH=%PYTHON_PATH%;%GOROOT%;%GOROOT%\bin;%GIT_PATH%;%GIT_PATH%\bin;%GOPATH%;%PATH%;
+@SET PATH=%PYTHON_PATH%;
+@SET PATH=%GOROOT1%;%GOROOT1%\bin;%PATH%;
+@SET PATH=%GOROOT2%;%GOROOT2%\bin;%PATH%;
+@SET PATH=%GOPATH%;%PATH%;
+@SET PATH=%GIT_PATH%;%GIT_PATH%\bin;%PATH%;
 @SET PATH=%MINGW_PATH%;%MINGW_PATH%\bin;%PATH%;
 @SET PATH=%this_file_path%\..\bin;%PATH%;
 
